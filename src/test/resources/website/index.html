@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">📚 BookNest</div>
+    <nav>Library Management System</nav>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <h1>Library Dashboard</h1>
+        <p>Manage your books easily and efficiently.</p>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Total Books</h3>
+            <p id="totalBooks">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Available Books</h3>
+            <p id="availableBooks">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Issued Books</h3>
+            <p id="issuedBooks">0</p>
+        </div>
+    </section>
+
+    <section class="content">
+
+        <div class="form-section">
+            <h2>Add New Book</h2>
+
+            <form id="bookForm">
+
+                <label for="bookId">Book ID</label>
+                <input type="text" id="bookId"
+                       placeholder="Enter Book ID" required>
+
+                <label for="bookName">Book Name</label>
+                <input type="text" id="bookName"
+                       placeholder="Enter Book Name" required>
+
+                <label for="authorName">Author Name</label>
+                <input type="text" id="authorName"
+                       placeholder="Enter Author Name" required>
+
+                <label for="status">Availability Status</label>
+                <select id="status">
+                    <option value="Available">Available</option>
+                    <option value="Issued">Issued</option>
+                </select>
+
+                <button type="submit">+ Add Book</button>
+
+            </form>
+        </div>
+
+        <div class="books-section">
+            <h2>Book Collection</h2>
+
+            <input type="text" id="searchInput"
+                   placeholder="Search by book name or author...">
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="bookList">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No books added yet.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 BookNest | Library Management System</p>
+</footer>
+
+</body>
+</html>
